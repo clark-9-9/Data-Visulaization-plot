@@ -3,7 +3,7 @@
 import { Fragment } from "react";
 import PlotFigure from "../PlotFigure";
 import * as Plot from "@observablehq/plot";
-import aapl from "../Data/aapl.json";
+// import aapl from "../Data/aapl.json";
 
 export default function Page() {
     return (

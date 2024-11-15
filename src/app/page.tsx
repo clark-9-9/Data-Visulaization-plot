@@ -7,20 +7,20 @@ import PlotFigure from "./PlotFigure";
 import penguins from "./Data/penguins.json";
 import aapl from "./Data/aapl.json";
 import alphabet from "./Data/alphabet.json";
-import Data from "./test";
-import { StockData } from "./ts/app";
+// import Data from "./test";
+// import { StockData } from "./ts/app";
 
-const lineData = [
-    ["AAPL", aapl],
-    ["GOOG", goog],
-].flatMap(([Symbol, values]) => {
-    return values.map((d: StockData) => {
-        return { Symbol, ...d };
-    });
-});
+// const lineData = [
+//     ["AAPL", aapl],
+//     ["GOOG", goog],
+// ].flatMap(([Symbol, values]) => {
+//     return values.map((d: StockData) => {
+//         return { Symbol, ...d };
+//     });
+// });
 
 export default function Page() {
-    const parseDate = (dateString: string) => new Date(dateString);
+    // const parseDate = (dateString: string) => new Date(dateString);
     const [margins, setMargins] = useState({
         top: 20,
         right: 100,
@@ -49,8 +49,8 @@ export default function Page() {
             markPlotDiv.appendChild(markPlot);
         }
 
-        const color = markPlot.scale("color");
-        const legend = markPlot.legend("color");
+        // const color = markPlot.scale("color");
+        // const legend = markPlot.legend("color");
         // console.log(color?.range);
         // console.log(legend?.cloneNode(true));
 
@@ -145,22 +145,22 @@ export default function Page() {
                         Plot.ruleY([50], { stroke: "yellow" }),
                         Plot.ruleY([0], { stroke: "white" }),
                         Plot.ruleY([190], { stroke: "yellow" }),
-                        Plot.lineY(lineData, {
-                            // x: "Date",
-                            x: (d) => parseDate(d.Date),
+                        // Plot.lineY(lineData, {
+                        //     // x: "Date",
+                        //     x: (d) => parseDate(d.Date),
+                        //     y: "Close",
+                        //     stroke: "Symbol",
+                        // }),
+                        Plot.lineY(goog, {
+                            x: "Date",
                             y: "Close",
-                            stroke: "Symbol",
+                            stroke: "red",
                         }),
-                        // Plot.lineY(goog, {
-                        //     x: "Date",
-                        //     y: "Close",
-                        //     stroke: "red",
-                        // }),
-                        // Plot.lineY(aapl, {
-                        //     x: "Date",
-                        //     y: "Close",
-                        //     stroke: "blue",
-                        // }),
+                        Plot.lineY(aapl, {
+                            x: "Date",
+                            y: "Close",
+                            stroke: "blue",
+                        }),
                     ],
                 }}
             />

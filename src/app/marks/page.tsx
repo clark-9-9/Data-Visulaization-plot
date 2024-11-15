@@ -1,5 +1,5 @@
 "use client";
-import * as d3 from "d3";
+// import * as d3 from "d3";
 import * as Plot from "@observablehq/plot";
 import PlotFigure from "../PlotFigure";
 import gistemp from "../Data/gistemp.json";

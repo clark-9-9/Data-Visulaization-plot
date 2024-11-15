@@ -6,14 +6,14 @@ import { fruits } from "../ts/app";
 import gistemp from "../Data/gistemp.json";
 import aapl from "../Data/aapl.json";
 import temperatures from "../Data/sf-temperatures.json";
-import { Fragment, useEffect } from "react";
+import { Fragment } from "react";
 // import CsvFileInput from "./CsvFileInput";
 
 export default function Page() {
     const parseDate = (dateString: string) => new Date(dateString);
     // const formatTime = d3.utcFormat("%B %d, %Y");
     // const formatTime = d3.utcFormat("%b %e, %Y");
-    const formatTime = d3.timeFormat("%b %e");
+    // const formatTime = d3.timeFormat("%b %e");
 
     // const [datas, setData] = useState<any[]>([]);
     // const handleFileLoad = (csvData: any) => {

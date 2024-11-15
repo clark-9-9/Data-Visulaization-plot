@@ -1,7 +1,7 @@
 "use client";
 
 import * as Plot from "@observablehq/plot";
-import { createElement } from "react";
+// import { createElement } from "react";
 import { useEffect, useRef } from "react";
 
 interface PlotFigureProps {
