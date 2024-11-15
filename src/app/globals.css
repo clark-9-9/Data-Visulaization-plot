@@ -3,25 +3,79 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+[aria-label="tip"] {
+    font-weight: bold !important;
+    background-color: rgba(252, 0, 0, 0.8) !important;
+    color: black !important;
+    border: 1px solid white !important;
+    border-radius: 40px !important;
+    padding: 834px !important;
+    font-size: 12px !important;
+    transition: opacity 0.2s ease-in-out !important;
+}
+
+[aria-label="tip"]:hover {
+    opacity: 1;
+}
+
+/* 
+svg g[aria-label="tip"] path {
+    fill: white;  Set the background color of the tooltip 
+    stroke: black; Set the border color 
+}
+
+svg g[aria-label="tip"] text {
+    fill: black;  Change the text color 
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+} */
+
+/* 
+.dot-marks circle {
+    transition: 0.2s ease-in-out;
+}
+
+.dot-marks:hover circle:hover {
+    r: 20px;
+}
+
+.dot-marks circle:hover {
+    r: 20px;
+} */
+
+[aria-label="crosshair text"] {
+    stroke: white !important;
+    color: white !important;
+    font-weight: normal !important;
+    font-size: 12px !important;
+    stroke-width: 1px !important;
+}
+
+/* -------------- */
+
+.TreeMark {
+    /* @apply mt-[20rem] rotate-90; */
 }
